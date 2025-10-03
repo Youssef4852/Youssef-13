@@ -129,6 +129,7 @@ section {
   left: 0;
   z-index: 999999;
   background-color: #fff;
+  box-shadow: 0 0 10px rgb(0 0 0 / 10%);
 }
 .header .container {
   display: flex;
@@ -449,7 +450,7 @@ section {
 }
 .portfolio .container .box:hover {
   transform: translateY(-10px);
-  box-shadow: 0px 0 25px rgb(0 0 0 / 30%);
+  box-shadow: 0px 10px 25px rgb(0 0 0 / 15%), 0 -5px 20px rgb(0 0 0 / 10%);
 }
 .portfolio .container .box img {
   width: 100%;
