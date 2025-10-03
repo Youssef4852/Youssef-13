@@ -614,6 +614,7 @@ section {
 .footer {
   background-color: #111;
   padding: 25px;
+  border-radius: 15px 15px 0 0;
 }
 .footer .container {
   display: flex;
