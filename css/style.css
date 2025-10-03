@@ -29,6 +29,21 @@ img:active {
   color: #000;
   background-color: var(--main-color);
 }
+::-webkit-scrollbar {
+  background-color: #fff;
+  width: 7px;
+}
+::-webkit-scrollbar-thumb {
+  background-color: var(--main-color);
+  border-radius: 8px;
+  cursor: pointer;
+}
+::-webkit-scrollbar-thumb:hover {
+  background-color: #79cf0f;
+}
+::-webkit-scrollbar-thumb:active {
+  background-color: var(--main-color);
+}
 section {
   padding: 100px 0;
 }
