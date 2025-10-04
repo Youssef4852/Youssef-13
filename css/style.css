@@ -149,14 +149,14 @@ section {
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 20px;
+  gap: 10px;
 }
 .header .list li {
   position: relative;
   font-weight: 600;
   cursor: pointer;
   font-size: 17px;
-  padding: 7px 12px;
+  padding: 10px 17px;
   border-radius: 5px;
   z-index: 1;
 }
@@ -437,9 +437,113 @@ section {
   }
 }
 /* Portfolio */
-.portfolio {
+.services {
   padding: 200px 0;
 }
+
+.services .container,
+.portfolio .container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 50px;
+  margin-top: 50px;
+}
+.container .box {
+  box-shadow: 0 0 15px rgb(0 0 0 / 15%);
+  border-radius: 10px;
+  overflow: hidden;
+}
+.container .box:hover {
+  transform: translateY(-10px);
+  box-shadow: 0px 10px 25px rgb(0 0 0 / 15%), 0 -5px 20px rgb(0 0 0 / 5%);
+}
+.services .container .box i {
+  font-size: 60px;
+  margin-bottom: 30px;
+  color: #fff;
+  background-color: #79cf0f;
+  border-radius: 50%;
+  padding: 10px;
+  cursor: pointer;
+}
+.services .container .box i:hover {
+  background-color: #73c909;
+}
+.services .container .box:hover i {
+  transform: rotate(10deg);
+}
+.container .box .cont {
+  padding: 25px;
+}
+.container .box .cont h2 {
+  margin-bottom: 10px;
+  color: #6ab311;
+}
+.container .box .cont p {
+  line-height: 1.7;
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 5px;
+  padding-bottom: 10px;
+}
+.container .box .cont .btn {
+  position: relative;
+  margin-top: 10px;
+  padding: 8px 20px;
+  font-size: 16px;
+  text-transform: none;
+  background-color: var(--main-color);
+  border-color: var(--main-color);
+  overflow: hidden;
+  z-index: 1;
+}
+.container .box .cont .btn::before,
+.container .box .cont .btn::after,
+.main-heading h2::before,
+.main-heading h2::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -100%;
+  width: 125%;
+  height: 100%;
+  border-radius: 50px;
+  z-index: -1;
+}
+.services .container .box .cont .btn::before,
+.main-heading h2::before {
+  background-color: #fff;
+  transition: 0.3s ease;
+}
+.services .container .box .cont .btn::after,
+.main-heading h2::after {
+  background-color: #f5f5f5;
+  transition: 0.5s ease;
+}
+.services .container .box .cont .btn:hover::before,
+.main-heading h2:hover::before {
+  bottom: 0;
+}
+.services .container .box .cont .btn:hover::after,
+.main-heading h2:hover::after {
+  bottom: 100%;
+  transition-delay: 0.3s;
+}
+.services .container .box .cont .btn:hover {
+  border-color: #000;
+}
+@media (max-width: 499px) {
+  .services .container {
+    grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
+  }
+}
+
+/* Portfolio */
+.portfolio {
+  padding: 50px 0 100px;
+  margin-bottom: 100px;
+}
+
 .portfolio .links {
   display: flex;
   justify-content: center;
@@ -466,88 +570,11 @@ section {
   border-color: var(--main-color);
   color: #000;
 }
-.portfolio .container {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 50px;
-}
-.portfolio .container .box {
-  box-shadow: 0 0 15px rgb(0 0 0 / 15%);
-  border-radius: 10px;
-  overflow: hidden;
-}
-.portfolio .container .box:hover {
-  transform: translateY(-10px);
-  box-shadow: 0px 10px 25px rgb(0 0 0 / 15%), 0 -5px 20px rgb(0 0 0 / 10%);
-}
-.portfolio .container .box img {
+
+.portfolio .box img {
   width: 100%;
 }
-.portfolio .container .box .cont {
-  padding: 20px;
-}
-.portfolio .container .box .cont h2 {
-  margin-bottom: 10px;
-  color: #6ab311;
-}
-.portfolio .container .box .cont p {
-  line-height: 1.7;
-  border-bottom: 1px solid #ccc;
-  margin-bottom: 5px;
-  padding-bottom: 10px;
-}
-.portfolio .container .box .cont .btn {
-  position: relative;
-  margin-top: 10px;
-  padding: 8px 20px;
-  font-size: 16px;
-  text-transform: none;
-  background-color: var(--main-color);
-  border-color: var(--main-color);
-  overflow: hidden;
-  z-index: 1;
-}
-.portfolio .container .box .cont .btn::before,
-.portfolio .container .box .cont .btn::after,
-.main-heading h2::before,
-.main-heading h2::after {
-  content: "";
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  bottom: -100%;
-  width: 125%;
-  height: 100%;
-  border-radius: 50px;
-  z-index: -1;
-}
-.portfolio .container .box .cont .btn::before,
-.main-heading h2::before {
-  background-color: #fff;
-  transition: 0.3s ease;
-}
-.portfolio .container .box .cont .btn::after,
-.main-heading h2::after {
-  background-color: #f5f5f5;
-  transition: 0.5s ease;
-}
-.portfolio .container .box .cont .btn:hover::before,
-.main-heading h2:hover::before {
-  bottom: 0;
-}
-.portfolio .container .box .cont .btn:hover::after,
-.main-heading h2:hover::after {
-  bottom: 100%;
-  transition-delay: 0.3s;
-}
-.portfolio .container .box .cont .btn:hover {
-  border-color: #000;
-}
-@media (max-width: 499px) {
-  .portfolio .container {
-    grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
-  }
-}
+
 /* Contact */
 .contact {
   padding: 75px 0 100px;
@@ -577,7 +604,7 @@ section {
   border: 1px solid #ccc;
   padding: 15px;
   border-radius: 5px;
-  caret-color: var(--main-color);
+  caret-color: #6ab311;
   cursor: pointer;
 }
 .contact form .field-group input:hover,
@@ -587,6 +614,10 @@ section {
 .contact form .field-group input:focus,
 .contact form .field-group textarea:focus {
   border-color: #6ab311;
+}
+.contact form .field-group input:focus::placeholder,
+.contact form .field-group textarea:focus::placeholder {
+  opacity: 0;
 }
 .contact form .field-group textarea {
   height: 200px;
