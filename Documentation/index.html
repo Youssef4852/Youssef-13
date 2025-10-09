@@ -3,40 +3,36 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" href="/assets/images/YoussefIcon.png">
-    <title>Documentation - Two Web Project</title>
-    <style>
-      body {
-        font-family: "Cairo", sans-serif;
-        line-height: 1.8;
-        margin: 40px;
-        color: #333;
-      }
-      h1,
-      h2 {
-        color: #6ab311;
-      }
-      code {
-        background: #f5f5f5;
-        padding: 3px 6px;
-        border-radius: 4px;
-      }
-      pre {
-        background: #f5f5f5;
-        padding: 15px;
-        border-radius: 5px;
-        overflow-x: auto;
-      }
-      a {
-        color: #6ab311;
-        text-decoration: none;
-      }
-      a:hover {
-        text-decoration: underline;
-      }
-    </style>
+    <!-- Google Font (Cairo) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="/assets/images/YoussefIcon.png" />
+    <title>Youssef 13 - Documentation</title>
+    <link rel="stylesheet" href="style.min.css" />
   </head>
   <body>
+    <header>
+      <div class="cont">
+        <h1>Documentation</h1>
+        <ul>
+          <li><a href="#structure">Structure</a></li>
+          <li><a href="#files">Files</a></li>
+          <li><a href="#resources">Resources</a></li>
+          <li><a href="#customize">Customize</a></li>
+          <li><a href="#support">Support</a></li>
+          <li><a href="#changing">Changing</a></li>
+          <li><i class="bx bx-menu"></i></li>
+        </ul>
+      </div>
+    </header>
     <h1>Two Web Project - Documentation</h1>
     <p>
       Thank you for purchasing <strong>Two Web Project</strong>. This document
@@ -44,7 +40,14 @@
       it, and how to use all its components.
     </p>
 
-    <h2>1. Folder Structure</h2>
+    <h2>0. Installation / How to Start</h2>
+    <p>
+      To open the template, simply extract the ZIP package and open
+      <code>index.html</code> in any browser. No installation or dependencies
+      are required.
+    </p>
+
+    <h2 id="structure">1. Folder Structure</h2>
     <pre>
 Two-Web-Project/
 │
@@ -52,10 +55,8 @@ Two-Web-Project/
 │   ├── css/
 │   │   ├── <a href="/assets/css/normalize.css" target="_blank">normalize.css</a>
 │   │   ├── <a href="/assets/css/style.css" target="_blank">style.css</a>
-│   │   ├── <a href="/assets/css/style.min.css" target="_blank">style.css</a>
+│   │   ├── <a href="/assets/css/style.min.css" target="_blank">style.min.css</a>
 │   │
-│   ├── documentation/
-│   │    ├── <a href="/assets/Documentation/index.html" target="_blank">index.html</a>
 │   │
 │   ├── images/
 │   │   ├── <a href="/assets/images/About me-bro.png" target="_blank">About me-bro.png</a>
@@ -77,17 +78,20 @@ Two-Web-Project/
 │   │   ├── <a href="/assets/js/script.js" target="_blank">script.js</a>
 │   │   ├── <a href="/assets/js/script.min.js" target="_blank">script.min.js</a>
 │   │
+│   ├── documentation/
+│   │   ├── <a href="/documentation/index.html" target="_blank">index.html</a>
+│   │
 │   ├── <a href="/assets/index.html" target="_blank">index.html</a>
 │   │
 │   ├── <a href="/assets/README.txt" target="_blank">README.txt</a>
 │
 </pre>
 
-    <h2>2. HTML Files</h2>
+    <h2 id="files">2. HTML Files</h2>
     <ul>
       <li>
-        <code><a href="/assets/index.html" target="_blank">index.html</a></code> –
-        Main page with all sections.
+        <code><a href="/assets/index.html" target="_blank">index.html</a></code>
+        – Main page with all sections.
       </li>
     </ul>
 
@@ -105,7 +109,9 @@ Two-Web-Project/
         >.
       </li>
       <li>
-        <code><a href="/assets/css/style.css" target="_blank">style.css</a></code>
+        <code
+          ><a href="/assets/css/style.css" target="_blank">style.css</a></code
+        >
         – Main stylesheet (editable).
       </li>
     </ul>
@@ -113,19 +119,20 @@ Two-Web-Project/
     <h2>4. JavaScript Files</h2>
     <ul>
       <li>
-        <code><a href="/assets/js/script.js">script.js</a></code> – Main JS logic:
+        <code><a href="/assets/js/script.js">script.js</a></code> – Main JS
+        logic:
       </li>
       <ul>
         <li>Adds <code>.scrolled</code> class to header after 100px scroll.</li>
         <li>Portfolio filter (All / Active / Inactive) functionality.</li>
       </ul>
       <li>
-        <code><a href="/assets/js/script.min.js">script.min.js</a></code> – Minified
-        version for better loading.
+        <code><a href="/assets/js/script.min.js">script.min.js</a></code> –
+        Minified version for better loading.
       </li>
     </ul>
 
-    <h2>5. External Resources</h2>
+    <h2 id="resources">5. External Resources</h2>
     <ul>
       <li>
         <strong>Google Fonts (Cairo)</strong> –
@@ -169,7 +176,7 @@ Two-Web-Project/
       </li>
     </ul>
 
-    <h2>6. Customization Guide</h2>
+    <h2 id="customize">6. Customization Guide</h2>
     <p>
       You can easily customize colors by editing <code>:root</code> variables in
       <code><a href="/assets/css/style.css">style.css</a></code
@@ -187,7 +194,7 @@ Two-Web-Project/
       <code>&lt;i class="bx bx-user"&gt;&lt;/i&gt;</code>
     </p>
 
-    <h2>7. Contact Form</h2>
+    <h2 id="support">7. Contact Form</h2>
     <p>
       The contact form in this template is static. To make it functional, you
       can integrate it with services like:
@@ -212,7 +219,7 @@ Two-Web-Project/
       <strong>Visual Studio Code</strong> or <strong>Sublime Text</strong>.
     </p>
 
-    <h3>1️⃣ Changing Text Content</h3>
+    <h3 id="changing">1️⃣ Changing Text Content</h3>
     <p>
       All text content is written directly inside the HTML file. For example, to
       change the main heading in the home section:
@@ -239,15 +246,16 @@ Two-Web-Project/
 
     <h3>2️⃣ Changing Images</h3>
     <p>
-      All images are located inside the <code><a href="/assets/images/">assets/images/</a></code> folder. To
+      All images are located inside the
+      <code><a href="/assets/images/">assets/images/</a></code> folder. To
       replace any image, keep the same filename or update the image path in
-      <code><a href="/assets/index.html">index.html</a></code>.
+      <code><a href="/assets/index.html">index.html</a></code
+      >.
     </p>
 
     <pre>
 <a href="/assets/images/portfolio-1.jpg">&lt;img src="assets/images/portfolio-1.jpg" alt="" /&gt;</a>
-</pre
-    >
+</pre>
 
     <p>
       Example: if you upload a new image named <code>new-project.jpg</code>,
@@ -265,7 +273,8 @@ Two-Web-Project/
     <p>
       You can easily update the main color of the template by editing the CSS
       variable in
-      <code><a href="/assets/css/style.css">style.css</a></code> at the very top:
+      <code><a href="/assets/css/style.css">style.css</a></code> at the very
+      top:
     </p>
 
     <pre>
@@ -316,7 +325,8 @@ Two-Web-Project/
     <h3>5️⃣ Editing Footer Information</h3>
     <p>
       To change the footer text or social links, open the bottom part of
-      <code><a href="/assets/index.html">index.html</a></code>:
+      <code><a href="/assets/index.html">index.html</a></code
+      >:
     </p>
 
     <pre>
@@ -342,8 +352,9 @@ Two-Web-Project/
 
     <h3>6️⃣ Editing the Contact Information</h3>
     <p>
-      Scroll to the Contact section inside <code><a href="/assets/index.html">index.html</a></code> and update
-      your details:
+      Scroll to the Contact section inside
+      <code><a href="/assets/index.html">index.html</a></code> and update your
+      details:
     </p>
 
     <pre>
@@ -358,7 +369,11 @@ Two-Web-Project/
     ---
 
     <h3>7️⃣ JavaScript Behavior</h3>
-    <p>The template uses <code><a href="/assets/js/script.js">script.js</a></code> for two main features:</p>
+    <p>
+      The template uses
+      <code><a href="/assets/js/script.js">script.js</a></code> for two main
+      features:
+    </p>
     <ul>
       <li>
         Header scroll effect – adds <code>.scrolled</code> class after 100px
@@ -367,8 +382,9 @@ Two-Web-Project/
       <li>Portfolio filtering – show/hide projects by category.</li>
     </ul>
     <p>
-      You can modify the script in <code><a href="/assets/js/script.js">assets/js/script.js</a></code> to adjust
-      behavior (e.g., change scroll threshold or add new filters).
+      You can modify the script in
+      <code><a href="/assets/js/script.js">assets/js/script.js</a></code> to
+      adjust behavior (e.g., change scroll threshold or add new filters).
     </p>
 
     ---
@@ -378,5 +394,59 @@ Two-Web-Project/
       Always make a backup of your files before making changes. After editing,
       refresh your browser or clear cache (Ctrl + Shift + R) to see updates.
     </p>
+
+    <h2>10. Browser Support</h2>
+    <p>
+      This template has been tested and works properly on the following
+      browsers:
+    </p>
+    <ul>
+      <li>Google Chrome (latest)</li>
+      <li>Mozilla Firefox (latest)</li>
+      <li>Microsoft Edge</li>
+      <li>Safari (latest)</li>
+    </ul>
+
+    <h2>11. Credits & Licensing</h2>
+    <ul>
+      <li>
+        Fonts:
+        <a href="https://fonts.google.com/specimen/Cairo" target="_blank"
+          >Cairo</a
+        >
+        by Google Fonts (Free)
+      </li>
+      <li>
+        Icons:
+        <a href="https://boxicons.com/" target="_blank">Boxicons</a> (Free)
+      </li>
+      <li>
+        CSS Reset:
+        <a href="https://necolas.github.io/normalize.css/" target="_blank"
+          >Normalize.css</a
+        >
+        (MIT License)
+      </li>
+      <li>
+        Images:
+        <a href="https://unsplash.com/" target="_blank">Unsplash</a> (Free for
+        commercial use)
+      </li>
+      <li>Minifiers: Toptal CSS & JS Minifier</li>
+    </ul>
+    <hr />
+    <p>
+      <strong>Version:</strong> 1.0.0<br />
+      <strong>Last Updated:</strong> October 2025
+    </p>
+
+    <footer>
+      <div class="cont">
+        <p>&copy; <span>Youssef 13</span> All Rights Reserved.</p>
+        <div class="icons">
+          <i class="bx bxl-youtube"></i><i class="bx bxl-facebook"></i>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>
