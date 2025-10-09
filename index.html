@@ -5,13 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- Box Icons -->
     <link
-      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      href="https://cdn.jsdelivr.net/npm/boxicons@2.1.4/css/boxicons.min.css"
       rel="stylesheet"
     />
     <!-- Icon Task -->
-    <link rel="icon" href="images/YoussefIcon.png" />
-    <link rel="stylesheet" href="css/normalize.css" />
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="icon" href="assets/images/YoussefIcon.png" />
+    <link rel="stylesheet" href="assets/css/normalize.css" />
+    <link rel="stylesheet" href="assets/css/style.min.css" />
     <!-- Google Font (Cairo Font) -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -26,7 +26,7 @@
       <div class="container">
         <nav>
           <h2 class="logo">
-            <img src="images/logo.png" alt="Logo" />
+            <img src="assets/images/logo.png" alt="Logo" />
           </h2>
           <ul class="list">
             <li><a onclick="window.location.href='#home'">Home</a></li>
@@ -57,6 +57,8 @@
       </div>
     </header>
 
+    <!-- Home -->
+
     <section class="home" id="home">
       <div class="container">
         <div class="text">
@@ -68,7 +70,7 @@
           <button class="btn">Book a corsuitation</button>
         </div>
         <div class="img">
-          <img src="images/Group discussion-bro.png" alt="" />
+          <img src="assets/images/Group discussion-bro.png" alt="" />
         </div>
       </div>
     </section>
@@ -97,13 +99,13 @@
           </div>
         </div>
         <div class="img">
-          <img src="images/About me-rafiki.png" alt="" />
+          <img src="assets/images/About me-rafiki.png" alt="" />
         </div>
       </div>
 
       <div class="container">
         <div class="img">
-          <img src="images/About me-pana.png" alt="" />
+          <img src="assets/images/About me-pana.png" alt="" />
         </div>
         <div class="text">
           <h2><i class="bx bx-question-mark"></i> What Is Skill Learn?</h2>
@@ -212,81 +214,99 @@
       </div>
 
       <ul class="links">
+        <li class="all actives">All</li>
         <li class="active">Active</li>
-        <li>In active</li>
-        <li>None</li>
+        <li class="inactive">In active</li>
       </ul>
 
       <div class="container">
-        <div class="box">
-          <img src="images/portfolio-1.jpg" alt="" />
+        <div class="box active">
+          <img src="assets/images/portfolio-1.jpg" alt="" />
           <div class="cont">
             <h2>Artificial Intelligent</h2>
             <p>
               Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nobis
               doloribus sunt ab, voluptatum culpa eius.
             </p>
-            <button class="btn">More</button>
+            <div class="btns">
+              <button class="btn">More</button>
+              <button class="btn active">Active</button>
+            </div>
           </div>
         </div>
 
-        <div class="box">
-          <img src="images/portfolio-2.jpg" alt="" />
+        <div class="box inactive">
+          <img src="assets/images/portfolio-2.jpg" alt="" />
           <div class="cont">
             <h2>Artificial Intelligent</h2>
             <p>
               Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nobis
               doloribus sunt ab, voluptatum culpa eius.
             </p>
-            <button class="btn">More</button>
+            <div class="btns">
+              <button class="btn">More</button>
+              <button class="btn inactive">In Active</button>
+            </div>
           </div>
         </div>
 
-        <div class="box">
-          <img src="images/portfolio-3.jpg" alt="" />
+        <div class="box active">
+          <img src="assets/images/portfolio-3.jpg" alt="" />
           <div class="cont">
             <h2>Artificial Intelligent</h2>
             <p>
               Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nobis
               doloribus sunt ab, voluptatum culpa eius.
             </p>
-            <button class="btn">More</button>
+            <div class="btns">
+              <button class="btn">More</button>
+              <button class="btn active">Active</button>
+            </div>
           </div>
         </div>
 
-        <div class="box">
-          <img src="images/portfolio-4.jpg" alt="" />
+        <div class="box inactive">
+          <img src="assets/images/portfolio-4.jpg" alt="" />
           <div class="cont">
             <h2>Artificial Intelligent</h2>
             <p>
               Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nobis
               doloribus sunt ab, voluptatum culpa eius.
             </p>
-            <button class="btn">More</button>
+            <div class="btns">
+              <button class="btn">More</button>
+              <button class="btn inactive">In Active</button>
+            </div>
           </div>
         </div>
 
-        <div class="box">
-          <img src="images/portfolio-5.jpg" alt="" />
+        <div class="box active">
+          <img src="assets/images/portfolio-5.jpg" alt="" />
           <div class="cont">
             <h2>Artificial Intelligent</h2>
             <p>
               Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nobis
               doloribus sunt ab, voluptatum culpa eius.
             </p>
-            <button class="btn">More</button>
+            <div class="btns">
+              <button class="btn">More</button>
+              <button class="btn active">Active</button>
+            </div>
           </div>
         </div>
 
-        <div class="box">
-          <img src="images/portfolio-6.jpg" alt="" />
+        <div class="box inactive">
+          <img src="assets/images/portfolio-6.jpg" alt="" />
           <div class="cont">
             <h2>Artificial Intelligent</h2>
             <p>
               Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nobis
               doloribus sunt ab, voluptatum culpa eius.
             </p>
-            <button class="btn">More</button>
+            <div class="btns">
+              <button class="btn">More</button>
+              <button class="btn inactive">In Active</button>
+            </div>
           </div>
         </div>
       </div>
@@ -375,5 +395,6 @@
         </div>
       </div>
     </div>
+    <script src="js/script.min.js"></script>
   </body>
 </html>
