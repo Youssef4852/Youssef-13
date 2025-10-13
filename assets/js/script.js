@@ -10,6 +10,22 @@ window.addEventListener("scroll", function () {
   }
 });
 
+// Scroll Top Button
+
+let buttonTop = document.querySelector(".scrollTop .scrollTopButton")
+
+window.addEventListener("scroll", () => {
+  if (window.scrollY > 100) {
+    buttonTop.classList.add("scrolled")
+  } else {
+    buttonTop.classList.remove("scrolled")
+  }
+})
+
+buttonTop.addEventListener("click", () => {
+  window.scrollTo(0, 0)
+})
+
 // When Click The List Item Portfolio
 
 let links = document.querySelectorAll(".portfolio .links li");
