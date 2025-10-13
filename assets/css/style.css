@@ -126,6 +126,48 @@ section {
 .main-heading h2:hover {
   border-color: #000;
 }
+.container .box .cont .btn {
+  position: relative;
+  margin-top: 10px;
+  padding: 8px 20px;
+  font-size: 16px;
+  text-transform: none;
+  background-color: var(--main-color);
+  border-color: var(--main-color);
+  overflow: hidden;
+  z-index: 1;
+}
+.container .box .cont .btn::before,
+.container .box .cont .btn::after,
+.scrollTopButton::before,
+.scrollTopButton::after,
+.main-heading h2::before,
+.main-heading h2::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -100%;
+  width: 125%;
+  height: 100%;
+  border-radius: 50px;
+  z-index: -1;
+}
+.main-heading h2::before {
+  background-color: #fff;
+  transition: 0.3s ease;
+}
+.main-heading h2::after {
+  background-color: #f5f5f5;
+  transition: 0.5s ease;
+}
+.main-heading h2:hover::before {
+  bottom: 0;
+}
+.main-heading h2:hover::after {
+  bottom: 100%;
+  transition-delay: 0.3s;
+}
 .header {
   width: 100%;
   position: fixed;
@@ -319,36 +361,67 @@ section {
   padding: 7px 10px;
   font-size: 25px;
   border-radius: 4px;
-  transform: scale(.5);
+  transform: scale(0.5);
   opacity: 0;
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
+  overflow: hidden;
+  border: 1px solid transparent;
 }
 .scrollTopButton.scrolled {
   transform: scale(1);
   opacity: 1;
 }
 .scrollTopButton:hover {
-  background-color: #79cf0f;
-  border-radius: 2px;
+  border: 1px solid #000;
 }
-.scrollTopButton:hover i {
-  animation: Animate-Moved-IconScrollTopButton 1s linear infinite;
+.scrollTopButton::before {
+  background-color: #fff;
+  transition: 0.3s ease;
+  border-radius: 4px;
 }
-@keyframes Animate-Moved-IconScrollTopButton {
-  0%,100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-5px);
-  }
+.scrollTopButton:hover::before {
+  bottom: 0;
 }
-
+.scrollTopButton::after {
+  border: 0;
+  background-color: #f5f5f5;
+  transition: 0.5s ease;
+  border-radius: 4px;
+}
+.scrollTopButton:hover::after {
+  bottom: 100%;
+  transition-delay: .2s;
+}
 /* Home */
 .home {
   padding: 0;
+}
+.iconHome {
+  position: absolute;
+  bottom: calc(20vh + 70px);
+  left: 50%;
+  transform: translateX(-50%);
+}
+.iconHome i {
+  color: #6ab311;
+  font-size: 35px;
+  cursor: pointer;
+  animation: IconHome-Animated-topToBottom 2s linear infinite;
+}
+@keyframes IconHome-Animated-topToBottom {
+  0%,25%,50%,75%, 100% {
+    transform: translateY(0);
+  }
+  40%, 60% {
+    transform: translateY(10px);
+  }
+}
+.iconHome i:hover {
+  color: #79cf0f;
+  animation-play-state: paused;
 }
 .home .container {
   display: flex;
@@ -548,31 +621,6 @@ section {
   margin-bottom: 5px;
   padding-bottom: 10px;
 }
-.container .box .cont .btn {
-  position: relative;
-  margin-top: 10px;
-  padding: 8px 20px;
-  font-size: 16px;
-  text-transform: none;
-  background-color: var(--main-color);
-  border-color: var(--main-color);
-  overflow: hidden;
-  z-index: 1;
-}
-.container .box .cont .btn::before,
-.container .box .cont .btn::after,
-.main-heading h2::before,
-.main-heading h2::after {
-  content: "";
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  bottom: -100%;
-  width: 125%;
-  height: 100%;
-  border-radius: 50px;
-  z-index: -1;
-}
 .services .container .box .cont .btn::before,
 .main-heading h2::before {
   background-color: #fff;
@@ -641,6 +689,9 @@ section {
   display: flex;
   justify-content: space-between;
 }
+.portfolio .box .btns .btn {
+  border: 1px solid #fff;
+}
 .portfolio .box .btns .btn.inactive {
   background-color: #f00;
   border-color: #f00;
@@ -650,6 +701,23 @@ section {
   background-color: #00b7ff;
   border-color: #00b7ff;
   color: #fff;
+}
+.portfolio .box .btns .btn:hover {
+  border-color: #000;
+  color: #000;
+}
+.portfolio .box .btns .btn:hover::before {
+  bottom: 0;
+  transition: .3s;
+  background-color: #fff;
+}
+.portfolio .box .btns .btn::after {
+  background-color: #f5f5f5;
+  transition: .5s;
+}
+.portfolio .box .btns .btn:hover::after {
+  bottom: 100%;
+  transition-delay: .2s;
 }
 
 /* Contact */

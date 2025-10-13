@@ -26,6 +26,14 @@ buttonTop.addEventListener("click", () => {
   window.scrollTo(0, 0)
 })
 
+// .iconHome Icon When Click
+
+let iconHome = document.querySelector(".iconHome i")
+
+iconHome.addEventListener("click", () => {
+  document.getElementById("about").scrollIntoView()
+})
+
 // When Click The List Item Portfolio
 
 let links = document.querySelectorAll(".portfolio .links li");
