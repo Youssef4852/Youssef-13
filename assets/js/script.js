@@ -10,29 +10,80 @@ window.addEventListener("scroll", function () {
   }
 });
 
-// Scroll Top Button
+// Menu Icon
 
-let buttonTop = document.querySelector(".scrollTop .scrollTopButton")
+let menu = document.querySelector(".header nav > li")
+let list = document.querySelector(".header .list")
 
-window.addEventListener("scroll", () => {
-  if (window.scrollY > 100) {
-    buttonTop.classList.add("scrolled")
-  } else {
-    buttonTop.classList.remove("scrolled")
+menu.addEventListener("click", (event)=>{
+  list.classList.toggle("showed")
+  event.stopPropagation()
+})
+
+document.addEventListener("click", ()=>{
+  list.classList.remove("showed")
+})
+
+list.addEventListener("click", (event)=>{
+  event.stopPropagation()
+})
+
+this.onclick = console.log(this)
+
+// Search Bar
+
+let search = document.querySelector(".header .bar .search input");
+
+function scrollToText() {
+  const text = search.value.trim().toLowerCase()
+
+  if (text) {    
+    const elements = document.querySelectorAll("p, h1, h2, h3, h4, h5, h6, span")
+
+    for (let el of elements) {
+      const content = el.textContent.toLowerCase()
+
+      if (content.includes(text)) {
+        el.scrollIntoView({behavior:"smooth", block:"center"})
+        break
+      }
+    }
+  }
+}
+
+search.addEventListener("keydown",  (event) =>{
+  if (event.key === 'Enter') {
+    scrollToText()
   }
 })
 
-buttonTop.addEventListener("click", () => {
-  window.scrollTo(0, 0)
+search.addEventListener("blur", () =>{
+  scrollToText()
 })
+
+// Scroll Top Button
+
+let buttonTop = document.querySelector(".scrollTop .scrollTopButton");
+
+window.addEventListener("scroll", () => {
+  if (window.scrollY > 100) {
+    buttonTop.classList.add("scrolled");
+  } else {
+    buttonTop.classList.remove("scrolled");
+  }
+});
+
+buttonTop.addEventListener("click", () => {
+  window.scrollTo(0, 0);
+});
 
 // .iconHome Icon When Click
 
-let iconHome = document.querySelector(".iconHome i")
+let iconHome = document.querySelector(".iconHome i");
 
 iconHome.addEventListener("click", () => {
-  document.getElementById("about").scrollIntoView()
-})
+  document.getElementById("about").scrollIntoView();
+});
 
 // When Click The List Item Portfolio
 

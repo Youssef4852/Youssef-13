@@ -3,15 +3,20 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Description -->
+    <meta
+      name="description"
+      content="Personal Portfolio Template – Responsive and modern design for developers and freelancers."
+   >
     <!-- Box Icons -->
     <link
       href="https://cdn.jsdelivr.net/npm/boxicons@2.1.4/css/boxicons.min.css"
       rel="stylesheet"
    >
     <!-- Icon Task -->
-    <link rel="icon" href="assets/images/YoussefIcon.png">
+    <link rel="icon" href="assets/images/logo-task.png">
     <link rel="stylesheet" href="assets/css/normalize.css">
-    <link rel="stylesheet" href="assets/css/style.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
     <!-- Google Font (Cairo Font) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -26,19 +31,22 @@
       <div class="container">
         <nav>
           <h2 class="logo">
-            <img src="assets/images/logo.png" alt="Logo">
+            <a href="#home">
+              <img src="assets/images/logo.png" alt="Logo">
+            </a>
           </h2>
           <ul class="list">
-            <li><a onclick="window.location.href='#home'">Home</a></li>
-            <li><a onclick="window.location.href='#about'">About</a></li>
-            <li>
-              <a onclick="window.location.href='#services'">Services</a>
+            <li onclick="window.location.href='#home'"><a>Home</a></li>
+            <li onclick="window.location.href='#about'"><a>About</a></li>
+            <li onclick="window.location.href='#services'">
+              <a>Services</a>
             </li>
-            <li>
-              <a onclick="window.location.href='#portfolio'">Portfolio</a>
+            <li onclick="window.location.href='#portfolio'">
+              <a>Portfolio</a>
             </li>
-            <li><a onclick="window.location.href='#contact'">Contact</a></li>
+            <li onclick="window.location.href='#contact'"><a>Contact</a></li>
           </ul>
+          <li><i class="bx bx-menu menu"></i></li>
         </nav>
         <div class="bar">
           <div class="search">
@@ -51,8 +59,8 @@
             <label for="search-field"><i class="bx bx-search"></i></label>
             <i class="bx bx-check"></i>
           </div>
-          <i class="bx bx-user"></i>
-          <i class="bx bx-log-in"></i>
+          <i onclick="window.location.href='#'" class="bx bx-user"></i>
+          <i onclick="window.location.href='#'" class="bx bx-log-in"></i>
         </div>
       </div>
     </header>
@@ -79,7 +87,7 @@
             <button class="btn">Book a corsuitation</button>
           </div>
           <div class="img">
-            <img src="assets/images/Landing.png" alt="">
+            <img src="assets/images/group-discussion-bro.png" alt="">
           </div>
         </div>
       </section>
@@ -108,13 +116,13 @@
             </div>
           </div>
           <div class="img">
-            <img src="assets/images/about1.png" alt="">
+            <img src="assets/images/about-me-rafiki.png" alt="">
           </div>
         </div>
 
         <div class="container">
           <div class="img">
-            <img src="assets/images/about2.png" alt="">
+            <img src="assets/images/about-me-pana.png" alt="">
           </div>
           <div class="text">
             <h2><i class="bx bx-question-mark"></i> What Is Skill Learn?</h2>
@@ -147,7 +155,7 @@
                 I build SEO-friendly websites that rank better, load faster, and
                 reach more people online easily.
               </p>
-              <button class="btn">Read Details</button>
+              <a href="#"><button class="btn">Read Details</button></a>
             </div>
           </div>
 
@@ -159,7 +167,7 @@
                 I create digital marketing strategies that boost brands, drive
                 engagement, and reach more people online effectively.
               </p>
-              <button class="btn">Read Details</button>
+              <a href="#"><button class="btn">Read Details</button></a>
             </div>
           </div>
 
@@ -171,7 +179,7 @@
                 I create online stores that are fast, secure, and designed to
                 boost sales while delivering a smooth shopping experience.
               </p>
-              <button class="btn">Read Details</button>
+              <a href="#"><button class="btn">Read Details</button></a>
             </div>
           </div>
 
@@ -183,7 +191,7 @@
                 I provide reliable support and regular maintenance to keep your
                 website updated, secure, and performing at its best.
               </p>
-              <button class="btn">Read Details</button>
+              <a href="#"><button class="btn">Read Details</button></a>
             </div>
           </div>
 
@@ -195,7 +203,7 @@
                 I build fast, scalable websites using clean code and modern
                 tools to ensure great performance across all devices.
               </p>
-              <button class="btn">Read Details</button>
+              <a href="#"><button class="btn">Read Details</button></a>
             </div>
           </div>
 
@@ -207,7 +215,7 @@
                 I design creative, user-focused websites that look amazing,
                 reflect your brand, and keep visitors engaged longer.
               </p>
-              <button class="btn">Read Details</button>
+              <a href="#"><button class="btn">Read Details</button></a>
             </div>
           </div>
         </div>
@@ -229,90 +237,108 @@
 
         <div class="container">
           <div class="box active">
-            <img src="assets/images/portfolio-1.jpg" alt="">
+            <img
+              src="assets/images/ai-dashboard-project.jpg"
+              alt="AI dashboard project preview"
+           >
             <div class="cont">
-              <h2>Artificial Intelligent</h2>
+              <h2>AI Dashboard System</h2>
               <p>
                 I develop smart AI systems that analyze data, learn from
                 patterns, and help automate complex tasks with better.
               </p>
               <div class="btns">
-                <button class="btn">More</button>
+                <a href="#"><button class="btn">More</button></a>
                 <button class="btn active">Active</button>
               </div>
             </div>
           </div>
 
           <div class="box inactive">
-            <img src="assets/images/portfolio-2.jpg" alt="">
+            <img
+              src="assets/images/machine-learning-app.jpg"
+              alt="Data analysis and design AI project"
+           >
             <div class="cont">
-              <h2>Artificial Intelligent</h2>
+              <h2>Data Analysis & Design</h2>
               <p>
-                I create AI-based tools that improve decision-making, enhance
-                productivity, and bring automation to daily business work.
+                I create AI-powered tools for analytics, smart email handling,
+                and creative design automation that improve results.
               </p>
               <div class="btns">
-                <button class="btn">More</button>
+                <a href="#"><button class="btn">More</button></a>
                 <button class="btn inactive">In Active</button>
               </div>
             </div>
           </div>
 
           <div class="box active">
-            <img src="assets/images/portfolio-3.jpg" alt="">
+            <img
+              src="assets/images/business-automation.jpg"
+              alt="Business automation AI project"
+           >
             <div class="cont">
-              <h2>Artificial Intelligent</h2>
+              <h2>Business Automation</h2>
               <p>
                 I build intelligent systems powered by AI that adapt to users,
                 solve real problems, and make digital experiences smarter.
               </p>
               <div class="btns">
-                <button class="btn">More</button>
+                <a href="#"><button class="btn">More</button></a>
                 <button class="btn active">Active</button>
               </div>
             </div>
           </div>
 
           <div class="box inactive">
-            <img src="assets/images/portfolio-4.jpg" alt="">
+            <img
+              src="assets/images/data-analysis-system.jpg"
+              alt="Data analysis AI system preview"
+           >
             <div class="cont">
-              <h2>Artificial Intelligent</h2>
+              <h2>Predictive Data System</h2>
               <p>
                 I design AI models that boost efficiency, predict outcomes, and
                 transform how businesses use technology to grow faster.
               </p>
               <div class="btns">
-                <button class="btn">More</button>
+                <a href="#"><button class="btn">More</button></a>
                 <button class="btn inactive">In Active</button>
               </div>
             </div>
           </div>
 
           <div class="box active">
-            <img src="assets/images/portfolio-5.jpg" alt="">
+            <img
+              src="assets/images/ui-ux-design.jpg"
+              alt="Modern UI UX design project"
+           >
             <div class="cont">
               <h2>Artificial Intelligent</h2>
               <p>
-                I develop custom AI solutions that learn, evolve, and empower
-                companies to work smarter, faster, and with better insights.
+                I craft intuitive and engaging UI/UX designs that enhance user
+                experience, boost interaction, and elevate digital products.
               </p>
               <div class="btns">
-                <button class="btn">More</button>
+                <a href="#"><button class="btn">More</button></a>
                 <button class="btn active">Active</button>
               </div>
             </div>
           </div>
 
           <div class="box inactive">
-            <img src="assets/images/portfolio-6.jpg" alt="">
+            <img
+              src="assets/images/deep-learning.jpg"
+              alt="Deep learning AI model visualization"
+           >
             <div class="cont">
-              <h2>Artificial Intelligent</h2>
+              <h2>Deep Learning</h2>
               <p>
-                I create AI-driven software that automates workflows, reduces
-                errors, and delivers intelligent performance across systems.
+                I develop deep learning systems that process complex data,
+                recognize patterns, and deliver accurate intelligent outcomes.
               </p>
               <div class="btns">
-                <button class="btn">More</button>
+                <a href="#"><button class="btn">More</button></a>
                 <button class="btn inactive">In Active</button>
               </div>
             </div>
