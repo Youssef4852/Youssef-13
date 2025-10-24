@@ -12,8 +12,8 @@ window.addEventListener("scroll", function () {
 
 // Menu Icon
 
-let menu = document.querySelector(".header nav > li")
-let list = document.querySelector(".header .list")
+let menu = document.querySelector(".header .list li.menu")
+let list = document.querySelector(".header .list .respons")
 
 menu.addEventListener("click", (event)=>{
   list.classList.toggle("showed")
