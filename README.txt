@@ -22,4 +22,5 @@ Credits:
 - Images (if any): https://stock.adobe.com/
 
 Support:
-For questions or support, contact: youssefosamatar@gmail.com
+For any questions, issues, or support requests, please contact me exclusively via my TemplateMonster Author Profile
+. Direct email support is not provided.
